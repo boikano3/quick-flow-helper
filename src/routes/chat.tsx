@@ -191,7 +191,7 @@ function ChatInner({
             )}
             {status === "submitted" && (
               <Message from="assistant">
-                <MessageContent variant="flat">
+                <MessageContent className="bg-transparent px-0 py-0">
                   <Shimmer>Thinking…</Shimmer>
                 </MessageContent>
               </Message>
