@@ -36,7 +36,13 @@ const stats = [
   { label: "Completed Today", value: "12", suffix: "of 15", icon: CheckCircle2, accent: "text-success" },
 ];
 
-const features = [
+const features: Array<{
+  title: string;
+  desc: string;
+  icon: typeof Mail;
+  to: "/email" | "/notes" | "/planner" | "/research" | "/chat";
+  badge?: string;
+}> = [
   {
     title: "Smart Email Generator",
     desc: "Draft professional emails with tone & audience controls.",
@@ -69,7 +75,7 @@ const features = [
     icon: MessagesSquare,
     to: "/chat",
   },
-] as const;
+];
 
 function Dashboard() {
   return (
