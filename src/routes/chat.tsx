@@ -169,7 +169,11 @@ function ChatInner({
               messages.map((message) => (
                 <Message from={message.role} key={message.id}>
                   <MessageContent
-                    variant={message.role === "user" ? "contained" : "flat"}
+                    className={
+                      message.role === "user"
+                        ? "group-[.is-user]:bg-primary group-[.is-user]:text-primary-foreground group-[.is-user]:shadow-elegant"
+                        : "bg-transparent px-0 py-0"
+                    }
                   >
                     {message.parts.map((part, i) => {
                       if (part.type === "text") {
